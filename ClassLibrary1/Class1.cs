@@ -9,6 +9,6 @@ namespace ClassLibrary1
         private int NumberOfBeds;
         private string quality;
 
-        //Hei
+        //Hei, hei paa dei
     }
 }
