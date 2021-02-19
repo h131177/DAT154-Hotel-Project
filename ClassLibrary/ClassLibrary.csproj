@@ -45,7 +45,7 @@
     <Compile Include="Reservation.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Task.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Customer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

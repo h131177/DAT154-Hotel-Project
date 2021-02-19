@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    class User
+    class Customer
     {
         //Innlogging - skal kunne sjå informasjonen om reservasjonen.
         //Utlogging - tar deg tilbake til hovedsida.
