@@ -6,9 +6,9 @@ namespace Task
 {
     class Task
     {
-        private int roomnr;
-        private String note;
-        private String status;
+        private int roomnr { get; set; }
+        private String note { get; set; }
+        private String status { get; set; }
 
         public Task (int roomnr, String note, String status)
         {

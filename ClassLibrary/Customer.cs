@@ -6,11 +6,11 @@ namespace ClassLibrary1
 {
     class Customer
     {
-        private int cid;
-        private string name;
-        private string address;
-        private int zipCode;
-        private string password;
+        private int cid { get; set; }
+        private string name { get; set; }
+        private string address { get; set; }
+        private int zipCode { get; set; }
+        private string password { get; set; }
 
         public Customer(int c, string n, string a, int z, string p)
         {

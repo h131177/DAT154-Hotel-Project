@@ -4,11 +4,11 @@ namespace ClassLibrary1
 {
     public class Room
     {   
-        private int roomNumber;
-        private int numberOfBeds;
-        private string quality;
-        private bool checkedIn;
-        private int rid;
+        private int roomNumber { get; set; }
+        private int numberOfBeds { get; set; }
+        private string quality { get; set; }
+        private bool checkedIn { get; set; }
+        private int rid { get; set; }
 
         public Room(int nr, int nrBeds, string q, bool c, int r)
         {
