@@ -22,8 +22,5 @@ namespace ClassLibrary1
             this.cid = c;
             this.roomNumber = rNr;
         }
-        
-        //given time periode for the hotel room
-        //let user search for different wishes.
     }
 }
