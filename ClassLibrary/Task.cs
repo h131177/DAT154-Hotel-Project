@@ -7,12 +7,16 @@ namespace Task
     class Task
     {
         private int roomnr { get; set; }
-        private String note { get; set; }
-        private String status { get; set; }
+        private string type { get; set; }
+        private string task { get; set; }
+        private string note { get; set; }
+        private string status { get; set; }
 
-        public Task (int roomnr, String note, String status)
+        public Task (int roomnr, string type, string task, string note, string status)
         {
             this.roomnr = roomnr;
+            this.type = type;
+            this.task = task;
             this.note = note;
             this.status = status;
         }
