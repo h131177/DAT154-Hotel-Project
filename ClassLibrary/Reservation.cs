@@ -6,12 +6,12 @@ namespace ClassLibrary1
 {
     class Reservation
     {
-        private int reservationNumber;
-        private string arrivalDay; //DateTime kanskje?
-        private string departureDay; //DateTime kanskje?
-        private double price;
-        private int cid; //Customer kanskje?
-        private int roomNumber;
+        private int reservationNumber { get; set; }
+        private string arrivalDay { get; set; } //DateTime kanskje?
+        private string departureDay { get; set; } //DateTime kanskje?
+        private double price { get; set; }
+        private int cid { get; set; } //Customer kanskje?
+        private int roomNumber { get; set; }
 
         public Reservation(int r, string a, string d, double p, int c, int rNr)
         {
