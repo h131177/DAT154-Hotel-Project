@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Task
+namespace ClassLibrary1
 {
     class Task
     {
