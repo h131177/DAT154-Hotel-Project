@@ -1,8 +1,5 @@
-﻿using Desktop.DAL;
-using Desktop.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,9 +24,8 @@ namespace Desktop
         private HotelContext dx = new HotelContext();
 
         private DbSet<Room> rooms;
-        private DbSet<Reservation> reservations;
-        private DbSet<Models.Task> tasks;
-        //private DbSet<Customer> customers;
+        private Dbset<Reservations> reservation;
+        private Db
 
         public MainWindow()
         {
@@ -51,15 +47,10 @@ namespace Desktop
             // Tab 3: "This program should also be used to register room service and maintenance requests for rooms"
             // Lister over alle Tasks, kanskje sortert på type?
             // Felter og knapp for å legge til nye Tasks.
-            rooms = dx.Rooms;
+
+            rooms = dx.rooms;
             reservations = dx.Reservations;
-            tasks = dx.Tasks;
-
-            rooms.Load();
-
-            roomList.DataContext = rooms.Local;
+            tasks =
         }
-
-
     }
 }
