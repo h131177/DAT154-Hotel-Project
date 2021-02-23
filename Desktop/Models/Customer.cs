@@ -6,7 +6,7 @@ namespace Desktop.Models
 {
     public class Customer
     {
-        public int Cid { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public int ZipCode { get; set; }

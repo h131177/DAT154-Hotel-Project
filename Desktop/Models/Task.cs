@@ -14,6 +14,7 @@ namespace Desktop.Models
     }
     public class Task
     {
+        public int ID { get; set; }
         public int Roomnr { get; set; }
         public Type? Type { get; set; }
         public string Task_ { get; set; }
