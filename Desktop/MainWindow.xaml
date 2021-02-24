@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="1600">
     <Grid>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="400" Margin="0,0,0,0" VerticalAlignment="Top" Width="800">
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="800" Margin="0,1,0,0" VerticalAlignment="Top" Width="1600">
             <TabItem Header="Reservations">
                 <Grid Background="#FFE5E5E5">
-                    <ListView Name="roomList" ItemsSource="{Binding}" Margin="0,1,0,0">
+                    <ListView Name="roomList" ItemsSource="{Binding}" Margin="0,0,0,0">
                         <ListView.View>
                             <GridView>
                                 <GridView.Columns>
@@ -23,13 +23,13 @@
                     </ListView>
                 </Grid>
             </TabItem>
-            <TabItem Header="Check in/out">
+            <TabItem Header="Andrine">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Tasks">
+            <TabItem Header="Amalie">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Rooms">
+            <TabItem Header="Kjetil">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>

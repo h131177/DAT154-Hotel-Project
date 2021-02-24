@@ -31,6 +31,7 @@ namespace Desktop
         private DbSet<Models.Task> tasks;
         //private DbSet<Customer> customers;
 
+
         public MainWindow()
         {
             InitializeComponent();
