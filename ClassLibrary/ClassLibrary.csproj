@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\HotelContext.cs" />
+    <Compile Include="DAL\HotelInitializer.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Room.cs" />
