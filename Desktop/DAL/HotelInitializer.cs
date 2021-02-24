@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Desktop.DAL
 {
-    public class HotelInitializer : System.Data.Entity.DropCreateDatabaseAlways<HotelContext>
+    public class HotelInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<HotelContext>
     {
         protected override void Seed(HotelContext context)
         {
