@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ClassLibrary.Models.Reservation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrivalDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArrivalDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartureDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReservationNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ReservationNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReservationNumber })
+        </td>
+    </tr>
+}
+
+</table>
