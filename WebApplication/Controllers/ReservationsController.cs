@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using ClassLibrary.DAL;
 using ClassLibrary.Models;
 
-namespace WebApplication
+namespace WebApplication.Controllers
 {
     public class ReservationsController : Controller
     {
