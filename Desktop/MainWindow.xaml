@@ -10,13 +10,19 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="600" Margin="0,1,0,0" VerticalAlignment="Top" Width="1000">
             <TabItem Header="Reservations">
                 <Grid Background="#FFE5E5E5">
-                    <ListView Name="roomList" ItemsSource="{Binding}" Margin="0,0,0,0">
+                    <ListView Name="ReservationsList" ItemsSource="{Binding}" Margin="0,0,0,0">
                         <ListView.View>
                             <GridView>
                                 <GridView.Columns>
-                                    <GridViewColumn Width="100" Header="Room Nr" DisplayMemberBinding="{Binding Path=RoomNumber}"></GridViewColumn>
-                                    <GridViewColumn Width="100" Header="Number of Beds" DisplayMemberBinding="{Binding Path=NumberOfBeds}"></GridViewColumn>
-                                    <GridViewColumn Width="100" Header="Quality" DisplayMemberBinding="{Binding Path=Quality}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Reservation Number" DisplayMemberBinding="{Binding Path=ReservationNumber}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Arrival Day" DisplayMemberBinding="{Binding Path=ArrivalDay}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Departure Day" DisplayMemberBinding="{Binding Path=DepartureDay}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Price" DisplayMemberBinding="{Binding Path=Price}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Room Number" DisplayMemberBinding="{Binding Path=RoomNumber}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Customer ID" DisplayMemberBinding="{Binding Path=C.ID}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Name" DisplayMemberBinding="{Binding Path=C.Name}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Address" DisplayMemberBinding="{Binding Path=C.Address}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Zip Code" DisplayMemberBinding="{Binding Path=C.ZipCode}"></GridViewColumn>
                                 </GridView.Columns>
                             </GridView>
                         </ListView.View>

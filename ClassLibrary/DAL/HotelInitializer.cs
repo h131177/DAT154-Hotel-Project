@@ -24,16 +24,29 @@ namespace ClassLibrary.DAL
             rooms.ForEach(r => context.Rooms.Add(r));
             context.SaveChanges();
 
-            var reservations = new List<Reservation>
+        var customers = new List<Customer>
             {
-            new Reservation{ReservationNumber=1,ArrivalDay=new DateTime(2021,2,2), DepartureDay=new DateTime(2021,3,2), Price=500, Cid=1, RoomNumber=0},
-            new Reservation{ReservationNumber=2,ArrivalDay=new DateTime(2021,4,2), DepartureDay=new DateTime(2021,5,2), Price=500, Cid=2, RoomNumber=0},
-            new Reservation{ReservationNumber=3,ArrivalDay=new DateTime(2021,6,2), DepartureDay=new DateTime(2021,8,2), Price=1000, Cid=3, RoomNumber=0},
-            new Reservation{ReservationNumber=4,ArrivalDay=new DateTime(2021,8,2), DepartureDay=new DateTime(2021,10,2), Price=1000, Cid=4, RoomNumber=0},
+            new Customer{ID=1,Name="Kjetil", Address="Testvei 1", ZipCode=5020, Password="Kjetil"},
+            new Customer{ID=2,Name="Amalie", Address="Testvei 2", ZipCode=5020, Password="Amalie"},
+            new Customer{ID=3,Name="Andrine", Address="Testvei 3", ZipCode=5020, Password="Andrine"},
+            new Customer{ID=4,Name="Magnus", Address="Testvei 4", ZipCode=5020, Password="Magnus"},
+            };
+
+            customers.ForEach(c => context.Customers.Add(c));
+            context.SaveChanges();
+
+
+        var reservations = new List<Reservation>
+            {
+            new Reservation{ReservationNumber=1,ArrivalDay=new DateTime(2021,2,2), DepartureDay=new DateTime(2021,3,2), Price=500, C=customers[0], RoomNumber=0},
+            new Reservation{ReservationNumber=2,ArrivalDay=new DateTime(2021,4,2), DepartureDay=new DateTime(2021,5,2), Price=500, C=customers[1], RoomNumber=0},
+            new Reservation{ReservationNumber=3,ArrivalDay=new DateTime(2021,6,2), DepartureDay=new DateTime(2021,8,2), Price=1000, C=customers[2], RoomNumber=0},
+            new Reservation{ReservationNumber=4,ArrivalDay=new DateTime(2021,8,2), DepartureDay=new DateTime(2021,10,2), Price=1000, C=customers[3], RoomNumber=0},
             };
 
             reservations.ForEach(r => context.Reservations.Add(r));
             context.SaveChanges();
+
             /*var courses = new List<Course>
             {
             new Course{CourseID=1050,Title="Teoretisk Kjemi"},

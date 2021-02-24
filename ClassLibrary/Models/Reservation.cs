@@ -12,7 +12,7 @@ namespace ClassLibrary.Models
         public DateTime ArrivalDay { get; set; }
         public DateTime DepartureDay { get; set; }
         public double Price { get; set; }
-        public int Cid { get; set; }
+        public Customer C { get; set; }
         public int RoomNumber { get; set; }
     }
 }

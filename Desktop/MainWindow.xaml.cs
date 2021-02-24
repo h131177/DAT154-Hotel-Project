@@ -29,7 +29,7 @@ namespace Desktop
         private DbSet<Room> rooms;
         private DbSet<Reservation> reservations;
         private DbSet<ClassLibrary.Models.Task> tasks;
-        //private DbSet<Customer> customers;
+        private DbSet<Customer> customers;
 
 
         public MainWindow()
@@ -55,12 +55,14 @@ namespace Desktop
             rooms = dx.Rooms;
             reservations = dx.Reservations;
             tasks = dx.Tasks;
+            customers = dx.Customers;
 
-            Room r1 = new Room { RoomNumber = 9, NumberOfBeds = 3, Quality = "High", CheckedIn = false, Rid = 0 };
-            dx.Rooms.Add(r1);
-            rooms.Load();
+            //Room r1 = new Room { RoomNumber = 9, NumberOfBeds = 3, Quality = "High", CheckedIn = false, Rid = 0 };
+            //dx.Rooms.Add(r1);
+            reservations.Load();
+            customers.Load();
 
-            roomList.DataContext = rooms.Local;
+            ReservationsList.DataContext = reservations.Local;
         }
 
 
