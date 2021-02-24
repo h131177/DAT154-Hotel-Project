@@ -26,10 +26,10 @@ namespace ClassLibrary.DAL
 
             var reservations = new List<Reservation>
             {
-            new Reservation{ReservationNumber=1,ArrivalDay=new DateTime(2,2,2021), DepartureDay=new DateTime(3,2,2021), Price=500, Cid=1, RoomNumber=0},
-            new Reservation{ReservationNumber=2,ArrivalDay=new DateTime(4,2,2021), DepartureDay=new DateTime(5,2,2021), Price=500, Cid=2, RoomNumber=0},
-            new Reservation{ReservationNumber=3,ArrivalDay=new DateTime(6,2,2021), DepartureDay=new DateTime(8,2,2021), Price=1000, Cid=3, RoomNumber=0},
-            new Reservation{ReservationNumber=4,ArrivalDay=new DateTime(8,2,2021), DepartureDay=new DateTime(10,2,2021), Price=1000, Cid=4, RoomNumber=0},
+            new Reservation{ReservationNumber=1,ArrivalDay=new DateTime(2021,2,2), DepartureDay=new DateTime(2021,3,2), Price=500, Cid=1, RoomNumber=0},
+            new Reservation{ReservationNumber=2,ArrivalDay=new DateTime(2021,4,2), DepartureDay=new DateTime(2021,5,2), Price=500, Cid=2, RoomNumber=0},
+            new Reservation{ReservationNumber=3,ArrivalDay=new DateTime(2021,6,2), DepartureDay=new DateTime(2021,8,2), Price=1000, Cid=3, RoomNumber=0},
+            new Reservation{ReservationNumber=4,ArrivalDay=new DateTime(2021,8,2), DepartureDay=new DateTime(2021,10,2), Price=1000, Cid=4, RoomNumber=0},
             };
 
         rooms.ForEach(r => context.Rooms.Add(r));
