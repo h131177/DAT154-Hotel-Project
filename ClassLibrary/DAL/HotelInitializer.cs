@@ -32,7 +32,7 @@ namespace ClassLibrary.DAL
             new Reservation{ReservationNumber=4,ArrivalDay=new DateTime(2021,8,2), DepartureDay=new DateTime(2021,10,2), Price=1000, Cid=4, RoomNumber=0},
             };
 
-        rooms.ForEach(r => context.Rooms.Add(r));
+            reservations.ForEach(r => context.Reservations.Add(r));
             context.SaveChanges();
             /*var courses = new List<Course>
             {
