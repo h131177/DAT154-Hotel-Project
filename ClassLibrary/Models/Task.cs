@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using System.Linq;
 
-namespace Desktop.Models
+namespace ClassLibrary.Models
 {
     public enum Type
     {

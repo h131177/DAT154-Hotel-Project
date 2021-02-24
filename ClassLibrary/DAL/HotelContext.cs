@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Desktop.Models;
+using ClassLibrary.Models;
 
-namespace Desktop.DAL
+namespace ClassLibrary.DAL
 {
     public class HotelContext : DbContext
     {

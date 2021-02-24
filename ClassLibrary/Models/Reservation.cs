@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 
-namespace Desktop.Models
+namespace ClassLibrary.Models
 {
     public class Reservation
     {

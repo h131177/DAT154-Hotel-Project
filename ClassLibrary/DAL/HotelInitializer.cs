@@ -1,7 +1,7 @@
-﻿using Desktop.Models;
+﻿using ClassLibrary.Models;
 using System.Collections.Generic;
 
-namespace Desktop.DAL
+namespace ClassLibrary.DAL
 {
     public class HotelInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<HotelContext>
     {

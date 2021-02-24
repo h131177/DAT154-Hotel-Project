@@ -1,5 +1,5 @@
-﻿using Desktop.DAL;
-using Desktop.Models;
+﻿using ClassLibrary.DAL;
+using ClassLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -28,7 +28,7 @@ namespace Desktop
 
         private DbSet<Room> rooms;
         private DbSet<Reservation> reservations;
-        private DbSet<Models.Task> tasks;
+        private DbSet<ClassLibrary.Models.Task> tasks;
         //private DbSet<Customer> customers;
 
 
@@ -56,6 +56,8 @@ namespace Desktop
             reservations = dx.Reservations;
             tasks = dx.Tasks;
 
+            Room r1 = new Room { RoomNumber = 9, NumberOfBeds = 3, Quality = "High", CheckedIn = false, Rid = 0 };
+            dx.Rooms.Add(r1);
             rooms.Load();
 
             roomList.DataContext = rooms.Local;
