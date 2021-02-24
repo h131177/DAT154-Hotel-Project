@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using ClassLibrary.DAL;
 using ClassLibrary.Models;
 
-namespace WebApplication.Controllers
+namespace WebApplication
 {
     public class ReservationsController : Controller
     {
@@ -47,7 +47,7 @@ namespace WebApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ReservationNumber,ArrivalDay,DepartureDay,Price,Cid,RoomNumber")] Reservation reservation)
+        public ActionResult Create([Bind(Include = "ReservationNumber,ArrivalDay,DepartureDay,Price,RoomNumber")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace WebApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ReservationNumber,ArrivalDay,DepartureDay,Price,Cid,RoomNumber")] Reservation reservation)
+        public ActionResult Edit([Bind(Include = "ReservationNumber,ArrivalDay,DepartureDay,Price,RoomNumber")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
