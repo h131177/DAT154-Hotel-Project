@@ -1,4 +1,5 @@
 ﻿using ClassLibrary.Models;
+using System;
 using System.Collections.Generic;
 
 namespace ClassLibrary.DAL
@@ -21,6 +22,17 @@ namespace ClassLibrary.DAL
             };
 
             rooms.ForEach(r => context.Rooms.Add(r));
+            context.SaveChanges();
+
+            var reservations = new List<Reservation>
+            {
+            new Reservation{ReservationNumber=1,ArrivalDay=new DateTime(2,2,2021), DepartureDay=new DateTime(3,2,2021), Price=500, Cid=1, RoomNumber=0},
+            new Reservation{ReservationNumber=2,ArrivalDay=new DateTime(4,2,2021), DepartureDay=new DateTime(5,2,2021), Price=500, Cid=2, RoomNumber=0},
+            new Reservation{ReservationNumber=3,ArrivalDay=new DateTime(6,2,2021), DepartureDay=new DateTime(8,2,2021), Price=1000, Cid=3, RoomNumber=0},
+            new Reservation{ReservationNumber=4,ArrivalDay=new DateTime(8,2,2021), DepartureDay=new DateTime(10,2,2021), Price=1000, Cid=4, RoomNumber=0},
+            };
+
+        rooms.ForEach(r => context.Rooms.Add(r));
             context.SaveChanges();
             /*var courses = new List<Course>
             {
