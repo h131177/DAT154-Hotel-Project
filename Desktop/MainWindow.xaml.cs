@@ -65,6 +65,11 @@ namespace Desktop
             ReservationsList.DataContext = reservations.Local;
         }
 
+        private void ReservationsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Reservation r = (Reservation)ReservationsList.SelectedItem;
 
+            new Editor(dx, r).ShowDialog();
+        }
     }
 }
