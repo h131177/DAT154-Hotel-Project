@@ -63,7 +63,7 @@ namespace Desktop
             customers.Load();
 
             ReservationsList.DataContext = reservations.Local;
-            checkInList.DataContext = reservations.Local;
+            CheckInList.DataContext = reservations.Local;
         }
 
         private void ReservationsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -71,6 +71,21 @@ namespace Desktop
             Reservation r = (Reservation)ReservationsList.SelectedItem;
 
             new Editor(dx, r, reservations, rooms).ShowDialog();
+        }
+
+        private void CheckInList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Reservation rs = (Reservation)CheckInList.SelectedItem;
+            int id = rs.ReservationNumber;
+            
+            Reservation res = dx.Reservations.Where(r => r.ReservationNumber == id).FirstOrDefault();
+
+            if (res != null)
+            {
+                res.C.CheckedIn = !res.C.CheckedIn;
+                dx.SaveChanges();
+            }
+            //Viewet blir ikkje oppdatert, men databasen blir
         }
     }
 }
