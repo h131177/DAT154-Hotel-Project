@@ -11,5 +11,6 @@ namespace ClassLibrary.Models
         public string Address { get; set; }
         public int ZipCode { get; set; }
         public string Password { get; set; }
+        public bool CheckedIn { get; set; }
     }
 }

@@ -11,14 +11,14 @@ namespace ClassLibrary.DAL
            
         var rooms = new List<Room>
             {
-            new Room{RoomNumber=1,NumberOfBeds=1, Quality="High", CheckedIn=false, Rid=0},
-            new Room{RoomNumber=2,NumberOfBeds=1, Quality="High", CheckedIn=false, Rid=0},
-            new Room{RoomNumber=3,NumberOfBeds=2, Quality="High", CheckedIn=false, Rid=0},
-            new Room{RoomNumber=4,NumberOfBeds=2, Quality="High", CheckedIn=false, Rid=0},
-            new Room{RoomNumber=5,NumberOfBeds=2, Quality="High", CheckedIn=false, Rid=0},
-            new Room{RoomNumber=6,NumberOfBeds=3, Quality="High", CheckedIn=false, Rid=0},
-            new Room{RoomNumber=7,NumberOfBeds=3, Quality="High", CheckedIn=false, Rid=0},
-            new Room{RoomNumber=8,NumberOfBeds=3, Quality="High", CheckedIn=false, Rid=0}
+            new Room{RoomNumber=1,NumberOfBeds=1, Quality="High", Rid=0},
+            new Room{RoomNumber=2,NumberOfBeds=1, Quality="High", Rid=0},
+            new Room{RoomNumber=3,NumberOfBeds=2, Quality="High", Rid=0},
+            new Room{RoomNumber=4,NumberOfBeds=2, Quality="High", Rid=0},
+            new Room{RoomNumber=5,NumberOfBeds=2, Quality="High", Rid=0},
+            new Room{RoomNumber=6,NumberOfBeds=3, Quality="High", Rid=0},
+            new Room{RoomNumber=7,NumberOfBeds=3, Quality="High", Rid=0},
+            new Room{RoomNumber=8,NumberOfBeds=3, Quality="High", Rid=0}
             };
 
             rooms.ForEach(r => context.Rooms.Add(r));
@@ -26,10 +26,10 @@ namespace ClassLibrary.DAL
 
         var customers = new List<Customer>
             {
-            new Customer{ID=1,Name="Kjetil", Address="Testvei 1", ZipCode=5020, Password="Kjetil"},
-            new Customer{ID=2,Name="Amalie", Address="Testvei 2", ZipCode=5020, Password="Amalie"},
-            new Customer{ID=3,Name="Andrine", Address="Testvei 3", ZipCode=5020, Password="Andrine"},
-            new Customer{ID=4,Name="Magnus", Address="Testvei 4", ZipCode=5020, Password="Magnus"},
+            new Customer{ID=1,Name="Kjetil", Address="Testvei 1", ZipCode=5020, Password="Kjetil", CheckedIn=false},
+            new Customer{ID=2,Name="Amalie", Address="Testvei 2", ZipCode=5020, Password="Amalie", CheckedIn=false},
+            new Customer{ID=3,Name="Andrine", Address="Testvei 3", ZipCode=5020, Password="Andrine", CheckedIn=false},
+            new Customer{ID=4,Name="Magnus", Address="Testvei 4", ZipCode=5020, Password="Magnus", CheckedIn=false},
             };
 
             customers.ForEach(c => context.Customers.Add(c));

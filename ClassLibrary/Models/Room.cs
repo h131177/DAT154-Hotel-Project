@@ -11,7 +11,6 @@ namespace ClassLibrary.Models
         public int RoomNumber { get; set; }
         public int NumberOfBeds { get; set; }
         public string Quality { get; set; }
-        public bool CheckedIn { get; set; }
         public int Rid { get; set; }
     }
 }
