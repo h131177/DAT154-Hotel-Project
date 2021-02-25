@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Reservations</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -28,6 +28,7 @@
 
 @foreach (var item in Model) {
     <tr>
+        
         <td>
             @Html.DisplayFor(modelItem => item.ArrivalDay)
         </td>
