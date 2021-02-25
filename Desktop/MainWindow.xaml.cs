@@ -69,7 +69,7 @@ namespace Desktop
         {
             Reservation r = (Reservation)ReservationsList.SelectedItem;
 
-            new Editor(dx, r).ShowDialog();
+            new Editor(dx, r, reservations, rooms).ShowDialog();
         }
     }
 }
