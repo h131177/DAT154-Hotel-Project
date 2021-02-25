@@ -29,8 +29,22 @@
                     </ListView>
                 </Grid>
             </TabItem>
-            <TabItem Header="Andrine">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Check in / out">
+                <Grid Background="#FFE5E5E5">
+                    <ListView Name="checkInList" ItemsSource="{Binding}" Margin="0,0,0,0" MouseDoubleClick="ReservationsList_MouseDoubleClick">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Width="100" Header="Reservation Number" DisplayMemberBinding="{Binding Path=ReservationNumber}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Arrival Day" DisplayMemberBinding="{Binding Path=ArrivalDay}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Departure Day" DisplayMemberBinding="{Binding Path=DepartureDay}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Customer ID" DisplayMemberBinding="{Binding Path=C.ID}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Name" DisplayMemberBinding="{Binding Path=C.Name}"></GridViewColumn>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
             </TabItem>
             <TabItem Header="Amalie">
                 <Grid Background="#FFE5E5E5"/>

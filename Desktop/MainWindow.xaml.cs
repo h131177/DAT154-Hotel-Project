@@ -63,6 +63,7 @@ namespace Desktop
             customers.Load();
 
             ReservationsList.DataContext = reservations.Local;
+            checkInList.DataContext = reservations.Local;
         }
 
         private void ReservationsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
