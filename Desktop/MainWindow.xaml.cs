@@ -44,21 +44,11 @@ namespace Desktop
             // på et rom for å booke til nye gjester, dette vil også kjøre ein metode for å beregne pris.
             // Dobbeltklikk gir ein ny editor med felter for å reservere rom, trenger ein knapp reserver.
 
-            // Tab 2: "It should also be used when guests check in and out."
-            // Liste over reservasjoner som ikkje har sjekka inn
-            // Lister over gjester på hotellet som har sjekka inn
-            // Dobbeltklikke for å endre status? Må muligens ha egen editor her og.
-
-            // Tab 3: "This program should also be used to register room service and maintenance requests for rooms"
-            // Lister over alle Tasks, kanskje sortert på type?
-            // Felter og knapp for å legge til nye Tasks.
             rooms = dx.Rooms;
             reservations = dx.Reservations;
             tasks = dx.Tasks;
             customers = dx.Customers;
 
-            //Room r1 = new Room { RoomNumber = 9, NumberOfBeds = 3, Quality = "High", CheckedIn = false, Rid = 0 };
-            //dx.Rooms.Add(r1);
             reservations.Load();
             customers.Load();
 
@@ -86,6 +76,11 @@ namespace Desktop
                 dx.SaveChanges();
             }
             //Viewet blir ikkje oppdatert, men databasen blir
+        }
+
+        private void availableRoomsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
