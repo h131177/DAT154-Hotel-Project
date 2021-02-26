@@ -54,9 +54,9 @@
                             <GridView>
                                 <GridView.Columns>
                                     <GridViewColumn Width="100" Header="Room Number" DisplayMemberBinding="{Binding Path=RoomNumber}"></GridViewColumn>
-                                    <GridViewColumn Width="100" Header="Number of Beds" DisplayMemberBinding="{Binding Path=ArrivalDay}"></GridViewColumn>
-                                    <GridViewColumn Width="100" Header="Quality" DisplayMemberBinding="{Binding Path=C.CheckedIn}"></GridViewColumn>
-                                    <GridViewColumn Width="100" Header="Available until" DisplayMemberBinding="{Binding Path=C.CheckedIn}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Number of Beds" DisplayMemberBinding="{Binding Path=NumberOfBeds}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Quality" DisplayMemberBinding="{Binding Path=C.Quality}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Available until" DisplayMemberBinding="{Binding Path=C.Quality}"></GridViewColumn>
                                 </GridView.Columns>
                             </GridView>
                         </ListView.View>

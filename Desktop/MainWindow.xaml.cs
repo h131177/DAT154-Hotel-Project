@@ -51,9 +51,13 @@ namespace Desktop
 
             reservations.Load();
             customers.Load();
+            rooms.Load();
 
             ReservationsList.DataContext = reservations.Local;
             CheckInList.DataContext = reservations.Local;
+
+            availableRoomsList.DataContext = rooms.Local;
+
         }
 
         private void ReservationsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -61,6 +65,7 @@ namespace Desktop
             Reservation r = (Reservation)ReservationsList.SelectedItem;
 
             new Editor(dx, r, reservations, rooms).ShowDialog();
+     
         }
 
         private void CheckInList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -80,7 +85,8 @@ namespace Desktop
 
         private void availableRoomsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            new EditorBook(dx);
+              
         }
     }
 }
