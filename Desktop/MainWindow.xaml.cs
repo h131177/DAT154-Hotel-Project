@@ -83,7 +83,7 @@ namespace Desktop
             //Viewet blir ikkje oppdatert, men databasen blir
         }
 
-        private void availableRoomsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void AvailableRoomsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             new EditorBook(dx);
               

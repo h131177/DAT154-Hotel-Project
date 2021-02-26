@@ -49,14 +49,14 @@
             </TabItem>
             <TabItem Header="New Reservation">
                 <Grid Background="#FFE5E5E5">
-                    <ListView Name="availableRoomsList" ItemsSource="{Binding}" Margin="0,0,0,0" MouseDoubleClick="availableRoomsList_MouseDoubleClick">
+                    <ListView Name="availableRoomsList" ItemsSource="{Binding}" Margin="0,0,0,0" MouseDoubleClick="AvailableRoomsList_MouseDoubleClick">
                         <ListView.View>
                             <GridView>
                                 <GridView.Columns>
                                     <GridViewColumn Width="100" Header="Room Number" DisplayMemberBinding="{Binding Path=RoomNumber}"></GridViewColumn>
                                     <GridViewColumn Width="100" Header="Number of Beds" DisplayMemberBinding="{Binding Path=NumberOfBeds}"></GridViewColumn>
-                                    <GridViewColumn Width="100" Header="Quality" DisplayMemberBinding="{Binding Path=C.Quality}"></GridViewColumn>
-                                    <GridViewColumn Width="100" Header="Available until" DisplayMemberBinding="{Binding Path=C.Quality}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Quality" DisplayMemberBinding="{Binding Path=Quality}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Available until" DisplayMemberBinding="{Binding Path=Quality}"></GridViewColumn>
                                 </GridView.Columns>
                             </GridView>
                         </ListView.View>
