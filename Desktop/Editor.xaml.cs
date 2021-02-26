@@ -73,7 +73,7 @@ namespace Desktop
             
             if (res != null)
             {
-                if (!comboBox.Text.Equals("")) res.RoomNumber = int.Parse(comboBox.Text);
+                if (!comboBox.Text.Equals("")) res.Room.RoomNumber = int.Parse(comboBox.Text);
                 dx.SaveChanges();
             }
             //Viewet blir ikkje oppdatert, men databasen blir

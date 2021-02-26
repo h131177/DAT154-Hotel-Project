@@ -13,6 +13,6 @@ namespace ClassLibrary.Models
         public DateTime DepartureDay { get; set; }
         public double Price { get; set; }
         public virtual Customer C { get; set; }
-        public int RoomNumber { get; set; }
+        public Room Room { get; set; }
     }
 }

@@ -11,14 +11,14 @@ namespace ClassLibrary.DAL
            
         var rooms = new List<Room>
             {
-            new Room{RoomNumber=1,NumberOfBeds=1, Quality="High", Rid=0},
-            new Room{RoomNumber=2,NumberOfBeds=1, Quality="High", Rid=0},
-            new Room{RoomNumber=3,NumberOfBeds=2, Quality="High", Rid=0},
-            new Room{RoomNumber=4,NumberOfBeds=2, Quality="High", Rid=0},
-            new Room{RoomNumber=5,NumberOfBeds=2, Quality="High", Rid=0},
-            new Room{RoomNumber=6,NumberOfBeds=3, Quality="High", Rid=0},
-            new Room{RoomNumber=7,NumberOfBeds=3, Quality="High", Rid=0},
-            new Room{RoomNumber=8,NumberOfBeds=3, Quality="High", Rid=0}
+            new Room{RoomNumber=1,NumberOfBeds=1, Quality="High", Reservations= new HashSet<Reservation>()},
+            new Room{RoomNumber=2,NumberOfBeds=1, Quality="High", Reservations= new HashSet<Reservation>()},
+            new Room{RoomNumber=3,NumberOfBeds=2, Quality="High", Reservations= new HashSet<Reservation>()},
+            new Room{RoomNumber=4,NumberOfBeds=2, Quality="High", Reservations= new HashSet<Reservation>()},
+            new Room{RoomNumber=5,NumberOfBeds=2, Quality="High", Reservations= new HashSet<Reservation>()},
+            new Room{RoomNumber=6,NumberOfBeds=3, Quality="High", Reservations= new HashSet<Reservation>()},
+            new Room{RoomNumber=7,NumberOfBeds=3, Quality="High", Reservations= new HashSet<Reservation>()},
+            new Room{RoomNumber=8,NumberOfBeds=3, Quality="High", Reservations= new HashSet<Reservation>()}
             };
 
             rooms.ForEach(r => context.Rooms.Add(r));
@@ -38,10 +38,10 @@ namespace ClassLibrary.DAL
 
         var reservations = new List<Reservation>
             {
-            new Reservation{ReservationNumber=1,ArrivalDay=new DateTime(2021,2,2), DepartureDay=new DateTime(2021,3,2), Price=500, C=customers[0], RoomNumber=0},
-            new Reservation{ReservationNumber=2,ArrivalDay=new DateTime(2021,4,2), DepartureDay=new DateTime(2021,5,2), Price=500, C=customers[1], RoomNumber=0},
-            new Reservation{ReservationNumber=3,ArrivalDay=new DateTime(2021,6,2), DepartureDay=new DateTime(2021,8,2), Price=1000, C=customers[2], RoomNumber=0},
-            new Reservation{ReservationNumber=4,ArrivalDay=new DateTime(2021,8,2), DepartureDay=new DateTime(2021,10,2), Price=1000, C=customers[3], RoomNumber=0},
+            new Reservation{ReservationNumber=1,ArrivalDay=new DateTime(2021,2,2), DepartureDay=new DateTime(2021,3,2), Price=500, C=customers[0], Room=new Room()},
+            new Reservation{ReservationNumber=2,ArrivalDay=new DateTime(2021,4,2), DepartureDay=new DateTime(2021,5,2), Price=500, C=customers[1], Room=new Room()},
+            new Reservation{ReservationNumber=3,ArrivalDay=new DateTime(2021,6,2), DepartureDay=new DateTime(2021,8,2), Price=1000, C=customers[2], Room=new Room()},
+            new Reservation{ReservationNumber=4,ArrivalDay=new DateTime(2021,8,2), DepartureDay=new DateTime(2021,10,2), Price=1000, C=customers[3], Room=new Room()},
             };
 
             reservations.ForEach(r => context.Reservations.Add(r));
