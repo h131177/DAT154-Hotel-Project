@@ -49,7 +49,7 @@
             </TabItem>
             <TabItem Header="New Reservation">
                 <Grid Background="#FFE5E5E5">
-                    <ListView Name="availableRoomsList" ItemsSource="{Binding}" Margin="0,0,0,0" MouseDoubleClick="AvailableRoomsList_MouseDoubleClick">
+                    <ListView Name="AvailableRoomsList" ItemsSource="{Binding}" Margin="0,0,0,0" MouseDoubleClick="AvailableRoomsList_MouseDoubleClick">
                         <ListView.View>
                             <GridView>
                                 <GridView.Columns>

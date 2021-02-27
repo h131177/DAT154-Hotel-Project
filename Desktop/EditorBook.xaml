@@ -5,19 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop"
         mc:Ignorable="d"
-        Title="EditorBook" Height="650" Width="1200">
+        Title="EditorBook" Height="450" Width="800">
     <Grid>
         <TextBox Name="nameTextbox" HorizontalAlignment="Left" Height="23" Margin="50,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="adressTextbox" HorizontalAlignment="Left" Height="23" Margin="175,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Calendar Name="arrivalDayBox" HorizontalAlignment="Left" Margin="744,62,0,0" VerticalAlignment="Top"/>
-        <Calendar Name="departureDayBox" HorizontalAlignment="Left" Margin="955,62,0,0" VerticalAlignment="Top"/>
         <TextBox Name="zipCodeTextbox" HorizontalAlignment="Left" Height="23" Margin="300,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="roomNumberTextbox" HorizontalAlignment="Left" Height="23" Margin="50,365,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="qualityTextbox" HorizontalAlignment="Left" Height="23" Margin="175,365,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="roomNumberTextbox" HorizontalAlignment="Left" Height="23" Margin="50,322,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="qualityTextbox" HorizontalAlignment="Left" Height="23" Margin="175,322,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <PasswordBox Name="passwordBox" HorizontalAlignment="Left" Margin="50,151,0,0" VerticalAlignment="Top" Width="133"/>
-        <Button Name="bookButton" Content="Book" HorizontalAlignment="Left" Margin="50,198,0,0" VerticalAlignment="Top" Width="102" Height="32"/>
-        <TextBox Name="numberOfBedsTextbox" HorizontalAlignment="Left" Height="23" Margin="300,365,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <DatePicker HorizontalAlignment="Left" Margin="522,95,0,0" VerticalAlignment="Top"/>
+        <Button Name="bookButton" Content="Book" HorizontalAlignment="Left" Margin="50,198,0,0" VerticalAlignment="Top" Width="102" Height="32" Click="bookButton_Click" />
+        <TextBox Name="numberOfBedsTextbox" HorizontalAlignment="Left" Height="23" Margin="300,322,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <DatePicker Name="checkInDate" HorizontalAlignment="Left" Margin="522,95,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="checkOutDate" HorizontalAlignment="Left" Margin="658,95,0,0" VerticalAlignment="Top"/>
+        <Label Content="Check In Date" HorizontalAlignment="Left" Margin="522,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="Check Out Dato" HorizontalAlignment="Left" Margin="658,64,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>

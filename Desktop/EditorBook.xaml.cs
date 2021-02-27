@@ -24,14 +24,44 @@ namespace Desktop
     {
         private HotelContext dx = new HotelContext();
 
+
         public EditorBook()
         {
             InitializeComponent();
         }
-        public EditorBook(HotelContext x) : this()
+        public EditorBook(HotelContext x, Room r) : this()
         {
             dx = x;
+            roomNumberTextbox.Text = r.RoomNumber.ToString();
+            numberOfBedsTextbox.Text = r.NumberOfBeds.ToString();
+            qualityTextbox.Text = r.Quality;
         }
+        private void bookButton_Click(object sender, RoutedEventArgs e)
+        {
+            //customer
 
+            string name = nameTextbox.Text;
+            string address = adressTextbox.Text;
+            int zipCode = int.Parse(zipCodeTextbox.Text);
+            string password = passwordBox.ToString();
+            bool checkedIn = false;
+
+            Customer cust = new Customer{Name = name, Address = address, ZipCode = zipCode, Password = password, CheckedIn = checkedIn};
+
+            //DateTime checkIn = (DateTime)checkInDate.Text;
+            //DateTime checkOut= 
+
+            int number = int.Parse(roomNumberTextbox.Text);
+            Room rm = dx.Rooms.Where(r => r.RoomNumber == number).FirstOrDefault();
+            int price = 500;
+
+            Reservation rs = new Reservation { ArrivalDay = new DateTime(2021, 2, 2), DepartureDay = new DateTime(2021, 3, 2), Price = price, C = cust, Room = rm };
+
+
+            dx.Reservations.Add(rs);
+            dx.SaveChanges();
+
+
+        }
     }
 }
