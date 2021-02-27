@@ -48,8 +48,8 @@ namespace Desktop
 
             Customer cust = new Customer{Name = name, Address = address, ZipCode = zipCode, Password = password, CheckedIn = checkedIn};
 
-            //DateTime checkIn = (DateTime)checkInDate.Text;
-            //DateTime checkOut= 
+            DateTime checkIn = checkInDate.SelectedDate.Value.Date;
+            DateTime checkOut= checkOutDate.SelectedDate.Value.Date;
 
             int number = int.Parse(roomNumberTextbox.Text);
             Room rm = dx.Rooms.Where(r => r.RoomNumber == number).FirstOrDefault();
