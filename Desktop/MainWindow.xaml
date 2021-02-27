@@ -18,7 +18,7 @@
                                     <GridViewColumn Width="100" Header="Arrival Day" DisplayMemberBinding="{Binding Path=ArrivalDay}"></GridViewColumn>
                                     <GridViewColumn Width="100" Header="Departure Day" DisplayMemberBinding="{Binding Path=DepartureDay}"></GridViewColumn>
                                     <GridViewColumn Width="100" Header="Price" DisplayMemberBinding="{Binding Path=Price}"></GridViewColumn>
-                                    <GridViewColumn Width="100" Header="Room Number" DisplayMemberBinding="{Binding Path=RoomNumber}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Room Number" DisplayMemberBinding="{Binding Path=Room.RoomNumber}"></GridViewColumn>
                                     <GridViewColumn Width="100" Header="Customer ID" DisplayMemberBinding="{Binding Path=C.ID}"></GridViewColumn>
                                     <GridViewColumn Width="100" Header="Name" DisplayMemberBinding="{Binding Path=C.Name}"></GridViewColumn>
                                     <GridViewColumn Width="100" Header="Address" DisplayMemberBinding="{Binding Path=C.Address}"></GridViewColumn>
