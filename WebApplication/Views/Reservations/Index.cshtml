@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.RoomNumber)
+            @Html.DisplayNameFor(model => model.Room.RoomNumber)
         </th>
         <th></th>
     </tr>
@@ -39,7 +39,7 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.RoomNumber)
+            @Html.DisplayFor(modelItem => item.Room.RoomNumber)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ReservationNumber }) |
