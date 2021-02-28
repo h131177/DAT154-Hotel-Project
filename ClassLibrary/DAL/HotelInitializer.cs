@@ -11,6 +11,7 @@ namespace ClassLibrary.DAL
            
         var rooms = new List<Room>
             {
+            new Room{RoomNumber=0,NumberOfBeds=0, Quality="High", Reservations= new HashSet<Reservation>()},
             new Room{RoomNumber=1,NumberOfBeds=1, Quality="High", Reservations= new HashSet<Reservation>()},
             new Room{RoomNumber=2,NumberOfBeds=1, Quality="High", Reservations= new HashSet<Reservation>()},
             new Room{RoomNumber=3,NumberOfBeds=2, Quality="High", Reservations= new HashSet<Reservation>()},
