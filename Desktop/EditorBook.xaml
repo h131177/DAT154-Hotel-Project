@@ -18,7 +18,7 @@
         <DatePicker Name="checkInDate" HorizontalAlignment="Left" Margin="522,95,0,0" VerticalAlignment="Top"/>
         <DatePicker Name="checkOutDate" HorizontalAlignment="Left" Margin="658,95,0,0" VerticalAlignment="Top"/>
         <Label Content="Check In Date" HorizontalAlignment="Left" Margin="522,64,0,0" VerticalAlignment="Top"/>
-        <Label Content="Check Out Dato" HorizontalAlignment="Left" Margin="658,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="Check Out Date" HorizontalAlignment="Left" Margin="658,64,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label" Content="Name" HorizontalAlignment="Left" Margin="50,64,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Address" HorizontalAlignment="Left" Margin="175,64,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Zip code" HorizontalAlignment="Left" Margin="300,64,0,0" VerticalAlignment="Top"/>

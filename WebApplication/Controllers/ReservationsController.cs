@@ -124,5 +124,45 @@ namespace WebApplication.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult Booking()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Booking([Bind(Include = "ReservationNumber,ArrivalDay,DepartureDay,Price,RoomNumber")] Reservation reservation)
+        {
+            if (ModelState.IsValid)
+            {
+                //db.Reservations.Add(reservation);
+                //db.SaveChanges();
+                return RedirectToAction("Create");
+            }
+
+            return View(reservation);
+        }
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login([Bind(Include = "C.ID, C.Password")] Reservation reservation)
+        {
+            if (ModelState.IsValid)
+            {
+                Customer custo = db.Customers.Where(c => c.ID == reservation.C.ID).FirstOrDefault();
+                if (custo != null)
+                {
+                    
+                    int id = reservation.C.ID;
+                    return RedirectToAction("Details/" + custo.ID);
+                }
+            }
+
+            return View(reservation);
+        }
     }
 }
