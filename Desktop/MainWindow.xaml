@@ -64,7 +64,23 @@
                 </Grid>
             </TabItem>
             <TabItem Header="All Tasks">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <ListView Name="TasksList" ItemsSource="{Binding}" Margin="0,0,0,0">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Width="100" Header="ID" DisplayMemberBinding="{Binding Path=ID}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Room Number" DisplayMemberBinding="{Binding Path=Roomnr}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Type" DisplayMemberBinding="{Binding Path=Type}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Task" DisplayMemberBinding="{Binding Path=Task_}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Note" DisplayMemberBinding="{Binding Path=Note}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Status" DisplayMemberBinding="{Binding Path=Status}"></GridViewColumn>
+                                    <GridViewColumn Width="100" Header="Employee" DisplayMemberBinding="{Binding Path=Eid}"></GridViewColumn>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
             </TabItem>
             <TabItem Header="New Task">
                 <Grid Background="#FFE5E5E5"/>

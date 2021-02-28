@@ -52,11 +52,12 @@ namespace Desktop
             reservations.Load();
             customers.Load();
             rooms.Load();
+            tasks.Load();
 
             ReservationsList.DataContext = reservations.Local;
             CheckInList.DataContext = reservations.Local;
-
             AvailableRoomsList.DataContext = rooms.Local;
+            TasksList.DataContext = tasks.Local;
 
         }
 
