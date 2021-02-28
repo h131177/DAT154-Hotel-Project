@@ -8,7 +8,7 @@
         Title="EditorBook" Height="450" Width="800">
     <Grid>
         <TextBox Name="nameTextbox" HorizontalAlignment="Left" Height="23" Margin="50,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="adressTextbox" HorizontalAlignment="Left" Height="23" Margin="175,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="addressTextbox" HorizontalAlignment="Left" Height="23" Margin="175,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="zipCodeTextbox" HorizontalAlignment="Left" Height="23" Margin="300,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="roomNumberTextbox" HorizontalAlignment="Left" Height="23" Margin="50,322,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="qualityTextbox" HorizontalAlignment="Left" Height="23" Margin="175,322,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>

@@ -35,13 +35,20 @@ namespace Desktop
             roomNumberTextbox.Text = r.RoomNumber.ToString();
             numberOfBedsTextbox.Text = r.NumberOfBeds.ToString();
             qualityTextbox.Text = r.Quality;
+            nameTextbox.Text = "";
+            addressTextbox.Text = "";
+            zipCodeTextbox.Text = "";
+            checkInDate.DisplayDateStart = DateTime.Today;
+            checkInDate.SelectedDate = DateTime.Today;
+            checkOutDate.DisplayDateStart = DateTime.Today;
+            checkOutDate.SelectedDate = DateTime.Today;
         }
         private void bookButton_Click(object sender, RoutedEventArgs e)
         {
             //customer
 
             string name = nameTextbox.Text;
-            string address = adressTextbox.Text;
+            string address = addressTextbox.Text;
             int zipCode = int.Parse(zipCodeTextbox.Text);
             string password = passwordBox.ToString();
             bool checkedIn = false;
@@ -55,7 +62,7 @@ namespace Desktop
             Room rm = dx.Rooms.Where(r => r.RoomNumber == number).FirstOrDefault();
             int price = 500;
 
-            Reservation rs = new Reservation { ArrivalDay = new DateTime(2021, 2, 2), DepartureDay = new DateTime(2021, 3, 2), Price = price, C = cust, Room = rm };
+            Reservation rs = new Reservation { ArrivalDay = checkIn, DepartureDay = checkOut, Price = price, C = cust, Room = rm };
 
 
             dx.Reservations.Add(rs);
