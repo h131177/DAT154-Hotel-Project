@@ -65,6 +65,7 @@
 
         <dd>
             @Html.DisplayFor(model => model.Room.RoomNumber)
+            @if (Model.Room.RoomNumber == 0) { <p>Room not asigned</p> }
         </dd>
 
     </dl>
