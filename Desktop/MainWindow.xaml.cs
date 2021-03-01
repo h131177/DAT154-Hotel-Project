@@ -59,6 +59,20 @@ namespace Desktop
             AvailableRoomsList.DataContext = rooms.Local;
             TasksList.DataContext = tasks.Local;
 
+            //addTask.Click += new RoutedEventHandler(AddTask_MouseDown);
+
+            List<int> availableRooms = new List<int>();
+
+            var rl = rooms.Select(room => new { room.RoomNumber });
+
+            foreach (var room in rl)
+            {
+                //Må legge inn kode her som sjekker om rommene er ledig
+                availableRooms.Add(room.RoomNumber);
+            }
+            taskroomNr.DataContext = availableRooms;
+            taskType.DataContext = Enum.GetValues(typeof(ClassLibrary.Models.Type));
+            taskStatus.DataContext = Enum.GetValues(typeof(Status));
         }
 
         private void ReservationsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -87,6 +101,20 @@ namespace Desktop
         {
             Room r = (Room)AvailableRoomsList.SelectedItem;
             new EditorBook(dx, r).ShowDialog();
+        }
+
+        private void AddTask_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+            int rNr = int.Parse(taskroomNr.Text);
+            ClassLibrary.Models.Type type = (ClassLibrary.Models.Type)taskType.SelectedValue;
+            Status status = (Status)taskStatus.SelectedValue;
+            string task = taskTask.Text;
+
+
+            ClassLibrary.Models.Task task1 = new ClassLibrary.Models.Task { Roomnr = rNr, Type = type, Task_ = task, Note = "", Status = status, Eid = 0 };
+            dx.Tasks.Add(task1);
+            dx.SaveChanges();   
         }
     }
 }
