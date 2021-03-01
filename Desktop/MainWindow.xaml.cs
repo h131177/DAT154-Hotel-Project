@@ -59,7 +59,7 @@ namespace Desktop
             AvailableRoomsList.DataContext = rooms.Local;
             TasksList.DataContext = tasks.Local;
 
-            //addTask.Click += new RoutedEventHandler(AddTask_MouseDown);
+            //addTask.MouseDown += AddTask_MouseDown;
 
             List<int> availableRooms = new List<int>();
 
@@ -103,7 +103,7 @@ namespace Desktop
             new EditorBook(dx, r).ShowDialog();
         }
 
-        private void AddTask_MouseDown(object sender, MouseButtonEventArgs e)
+        private void AddTask_Click(object sender, RoutedEventArgs e)
         {
 
             int rNr = int.Parse(taskroomNr.Text);
