@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button Name="cleaningButton" Content="Cleaning" Margin="227,271,0,0" VerticalAlignment="Top" Height="49" Width="103" Click="cleaningButton_Click"/>
+        <Button Name="maintenanceButton" Content="Maintenance" Margin="427,271,0,0" VerticalAlignment="Top" Height="49" Width="103" Click="maintenanceButton_Click"/>
+        <Button Name="serviceButton" Content="Service" Margin="637,271,0,0" VerticalAlignment="Top" Height="49" Width="103" Click="serviceButton_Click"/>
+        <TextBox Name="nameTextBox" HorizontalAlignment="Left" Margin="391,162,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
 
     </Grid>
 </Page>
