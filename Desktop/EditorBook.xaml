@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop"
         mc:Ignorable="d"
-        Title="EditorBook" Height="450" Width="850">
+        Title="Editor" Height="450" Width="850">
     <Grid>
         <TextBox Name="nameTextbox" HorizontalAlignment="Left" Height="23" Margin="50,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="addressTextbox" HorizontalAlignment="Left" Height="23" Margin="175,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
